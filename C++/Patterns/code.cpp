@@ -267,55 +267,120 @@ int main()
 
 
     // ****************************************************
-    int n = 4;
+    // int n = 4;
 
+    // for (int i=0; i<n; i++)
+    // {
+    //     for (int j=0; j<i+1; j++)
+    //     {
+    //         cout << "*";
+    //     }
+
+    //     for (int j=0; j<n-i-1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     for (int j=0; j<n-i-1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     for (int j=0; j<i+1; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+
+    // }
+
+    // for (int i=0; i<n; i++)
+    // {
+    //     for (int j=0; j<n-i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+
+    //     for (int j=0; j<i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     for (int j=0; j<i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+
+    //     for (int j=0; j<n-i; j++)
+    //     {
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+    // return 0;
+
+    // ************************************************************************
+    // Improved Logic 
+    
+    int n =4;
+
+    // Upper Layer
     for (int i=0; i<n; i++)
     {
+        // Print *
         for (int j=0; j<i+1; j++)
         {
             cout << "*";
         }
 
-        for (int j=0; j<n-i-1; j++)
+        // Print Spaces
+        if (i != n-1)
         {
-            cout << " ";
+            for (int j=0; j<2*(n-i+1)-4; j++)
+            {
+                cout << " ";
+            }
         }
 
-        for (int j=0; j<n-i-1; j++)
-        {
-            cout << " ";
-        }
-
-        for (int j=0; j<i+1; j++)
+        // Print *
+        for (int j=i+1; j>0; j--)
         {
             cout << "*";
         }
         cout << endl;
-
     }
 
+
+    // Bottom Layer
     for (int i=0; i<n; i++)
     {
-        for (int j=0; j<n-i; j++)
+
+        // Print *
+        for (int j=n-i; j>0; j--)
         {
             cout << "*";
         }
 
-        for (int j=0; j<i; j++)
+        // Print Spaces
+        if(i != 0)
         {
-            cout << " ";
-        }
+            for (int j=0; j<2*(i); j++)
+            {
+                cout << " ";
+            }
 
-        for (int j=0; j<i; j++)
-        {
-            cout << " ";
         }
-
-        for (int j=0; j<n-i; j++)
+        
+        // Print *
+        for (int j=n-i; j>0; j--)
         {
             cout << "*";
         }
+
         cout << endl;
     }
+
     return 0;
+
+
 }               
