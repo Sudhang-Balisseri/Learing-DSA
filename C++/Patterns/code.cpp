@@ -370,7 +370,7 @@ int main()
             }
 
         }
-        
+       
         // Print *
         for (int j=n-i; j>0; j--)
         {
@@ -381,6 +381,4 @@ int main()
     }
 
     return 0;
-
-
 }               
