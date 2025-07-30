@@ -31,8 +31,7 @@ int binToDecimal(int binNum)
         pow *= 2;
     }
     return ans;
-}    git branch -M main
- git branch -M main
+}
 
 int main()
 {
