@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    // vector-syntax-1
     vector<int> vec; //0
 
     // push_back function
@@ -32,6 +33,36 @@ int main()
     cout << "val at idx 2: " << vec[2] << " or " << vec.at(2) << endl; // [] or at() function
     cout << "front: " << vec.front() << endl; // front function
     cout << "back: " << vec.back() << endl; // back function
+
+    // vector-syntax-2
+    vector<int> vec2 = {1,2,3,4,5};
+
+    for (int val : vec2)
+    {
+        cout << val << " ";
+    }
+
+    cout << endl;
+    
+    // vector-syntax-3
+    vector<int> vec3(3, 69);
+
+    for (int val : vec3)
+    {
+        cout << val << " ";
+    }
+
+    cout << endl;
+
+    // vector-syntax-4
+    vector<int> vec4(vec2);
+
+    for (int val : vec4)
+    {
+        cout << val << " ";
+    }
+
+    cout << endl;
     
     return 0;
 }
